@@ -26,10 +26,6 @@
   font-style: normal;
 }
 
-/* * {
-  border: 1px solid red !important;
-} */
-
 /* css roots */
 :root {
   --main-font: 'Rubik', sans-serif;
@@ -249,7 +245,7 @@ html, body {
 }
 
 #about {
-  scroll-margin-top: 60px;
+  scroll-margin-top: 80px;
 }
 
 .section .name {
@@ -400,8 +396,8 @@ html, body {
 .footer {
   font-family: var(--main-font);
   text-align: center;
-  padding: 28px 0 0;
-  margin-top: 20px;
+  padding: 12px 0 0;
+  margin-top: 8px;
 }
 
 .footer-cta {
@@ -410,7 +406,7 @@ html, body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #888;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .footer-contact,
@@ -663,123 +659,84 @@ html, body {
   margin-bottom : 10px;
 }
 
-/* .image-grid {
-display: flex;
-flex-wrap: wrap;
-gap: 5px;
-justify-content: center;
-} */
-
 .grid-img {
-width: 200px;
-height:140px;
-object-fit: cover;
-position: relative;
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  position: relative;
 }
 
 .masonry-grid {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  padding: 20px 10px;
+  margin: 0 auto;
+  max-width: 1100px;
 }
 
 .masonry-grid img {
-  margin-top : 20px;
-height: auto;
-transition: transform 0.3s ease;
-object-fit: cover;
-position: relative;
+  height: auto;
+  transition: transform 0.3s ease, z-index 0s;
+  object-fit: cover;
+  position: relative;
+  margin: -6px;
 }
 
-
 .vertical-image {
-  width: 110px;
-
+  width: 130px;
 }
 
 .big-vertical-image {
-  width: 200px;
-
+  width: 220px;
 }
 
 .w-medium {
-  max-height: 150px;
-  width: auto ;
-  
+  max-height: 170px;
+  width: auto;
 }
 
 .w-small {
-  max-height: 120px;
-  width: auto ;
-  
+  max-height: 135px;
+  width: auto;
 }
 
-/* Pure CSS chaos */
-/* .masonry-grid img:nth-child(1)  { transform: rotate(-8deg) translate(-8px, 4px); z-index: 2; }
-.masonry-grid img:nth-child(2)  { transform: rotate(6deg) translate(12px, -5px); z-index: 1; }
-.masonry-grid img:nth-child(3)  { transform: rotate(-5deg) translate(-6px, 3px); z-index: 3; }
-.masonry-grid img:nth-child(4)  { transform: rotate(7deg) translate(8px, -4px); z-index: 1; }
-.masonry-grid img:nth-child(5)  { transform: rotate(-7deg) translate(-10px, 5px); z-index: 2; }
-.masonry-grid img:nth-child(6)  { transform: rotate(4deg) translate(6px, -2px); z-index: 1; }
-.masonry-grid img:nth-child(7)  { transform: rotate(-6deg) translate(-5px, 7px); z-index: 3; }
-.masonry-grid img:nth-child(8)  { transform: rotate(5deg) translate(7px, -3px); z-index: 2; }
-.masonry-grid img:nth-child(9)  { transform: rotate(-4deg) translate(-7px, 6px); z-index: 1; }
-.masonry-grid img:nth-child(10) { transform: rotate(3deg) translate(6px, -5px); z-index: 2; }
-.masonry-grid img:nth-child(11) { transform: rotate(-3deg) translate(-4px, 4px); z-index: 1; }
-.masonry-grid img:nth-child(12) { transform: rotate(8deg) translate(8px, -6px); z-index: 3; }
-.masonry-grid img:nth-child(13) { transform: rotate(-2deg) translate(-6px, 4px); z-index: 2; }
-.masonry-grid img:nth-child(14) { transform: rotate(6deg) translate(10px, -4px); z-index: 1; }
-.masonry-grid img:nth-child(15) { transform: rotate(-5deg) translate(-8px, 5px); z-index: 3; }
-.masonry-grid img:nth-child(16) { transform: rotate(7deg) translate(6px, -3px); z-index: 2; }
-.masonry-grid img:nth-child(17) { transform: rotate(-6deg) translate(-5px, 6px); z-index: 1; }
-.masonry-grid img:nth-child(18) { transform: rotate(4deg) translate(7px, -2px); z-index: 2; }
-.masonry-grid img:nth-child(19) { transform: rotate(-4deg) translate(-6px, 5px); z-index: 3; }
-.masonry-grid img:nth-child(20) { transform: rotate(5deg) translate(9px, -6px); z-index: 1; }
-  .masonry-grid img:nth-child(21) { transform: rotate(-5deg) translate(9px, -6px); z-index: 1; }
-.masonry-grid img:nth-child(22) { transform: rotate(5deg) translate(9px, -6px); z-index: 1; }
-.masonry-grid img:nth-child(23) { transform: rotate(-3deg) translate(9px, -6px); z-index: 1; }
-.masonry-grid img:nth-child(24) { transform: rotate(5deg) translate(9px, -3px); z-index: 1; }
- */
-
-
-
-/* Pure CSS chaos - more translation to break the lines */
-.masonry-grid img:nth-child(1)  { transform: translate(-28px, 24px); z-index: 2; }
-.masonry-grid img:nth-child(2)  { transform: translate(1px, -25px); z-index: 1; }
-.masonry-grid img:nth-child(3)  { transform: translate(-26px, 23px); z-index: 3; }
-.masonry-grid img:nth-child(4)  { transform: translate(2px, -24px); z-index: 1; }
-.masonry-grid img:nth-child(5)  { transform: translate(-30px, 25px); z-index: 2; }
-.masonry-grid img:nth-child(6)  { transform: translate(26px, -22px); z-index: 1; }
-.masonry-grid img:nth-child(7)  { transform: translate(-25px, 27px); z-index: 3; }
-.masonry-grid img:nth-child(8)  { transform: translate(27px, -23px); z-index: 2; }
-.masonry-grid img:nth-child(9)  { transform: translate(-27px, 26px); z-index: 1; }
-.masonry-grid img:nth-child(10) { transform: translate(36px, -25px); z-index: 2; }
-.masonry-grid img:nth-child(11) { transform: translate(-24px, 24px); z-index: 1; }
-.masonry-grid img:nth-child(12) { transform: translate(28px, -26px); z-index: 3; }
-.masonry-grid img:nth-child(13) { transform: translate(-26px, 24px); z-index: 2; }
-.masonry-grid img:nth-child(14) { transform: translate(90px, -24px); z-index: 1; }
-.masonry-grid img:nth-child(15) { transform: translate(-28px, 25px); z-index: 3; }
-.masonry-grid img:nth-child(16) { transform: translate(26px, -23px); z-index: 2; }
-.masonry-grid img:nth-child(17) { transform: translate(-25px, 26px); z-index: 1; }
-.masonry-grid img:nth-child(18) { transform: translate(27px, -22px); z-index: 2; }
-.masonry-grid img:nth-child(19) { transform: translate(-26px, 25px); z-index: 3; }
-.masonry-grid img:nth-child(20) { transform: translate(29px, -26px); z-index: 1; }
-.masonry-grid img:nth-child(21) { transform: translate(29px, -26px); z-index: 1; }
-.masonry-grid img:nth-child(22) { transform: translate(29px, -26px); z-index: 1; }
-.masonry-grid img:nth-child(23) { transform: translate(29px, -26px); z-index: 1; }
-.masonry-grid img:nth-child(24) { transform: translate(29px, -23px); z-index: 1; }
+/* Scattered layout — subtle rotations + small offsets */
+.masonry-grid img:nth-child(1)  { transform: rotate(-3deg) translate(-4px, 6px); z-index: 2; }
+.masonry-grid img:nth-child(2)  { transform: rotate(2deg) translate(3px, -4px); z-index: 1; }
+.masonry-grid img:nth-child(3)  { transform: rotate(-1.5deg) translate(-6px, 2px); z-index: 3; }
+.masonry-grid img:nth-child(4)  { transform: rotate(3.5deg) translate(2px, -5px); z-index: 1; }
+.masonry-grid img:nth-child(5)  { transform: rotate(-2deg) translate(-3px, 4px); z-index: 2; }
+.masonry-grid img:nth-child(6)  { transform: rotate(1deg) translate(5px, -2px); z-index: 1; }
+.masonry-grid img:nth-child(7)  { transform: rotate(-4deg) translate(-2px, 5px); z-index: 3; }
+.masonry-grid img:nth-child(8)  { transform: rotate(2.5deg) translate(4px, -3px); z-index: 2; }
+.masonry-grid img:nth-child(9)  { transform: rotate(-1deg) translate(-5px, 3px); z-index: 1; }
+.masonry-grid img:nth-child(10) { transform: rotate(3deg) translate(3px, -6px); z-index: 2; }
+.masonry-grid img:nth-child(11) { transform: rotate(-2.5deg) translate(-4px, 4px); z-index: 3; }
+.masonry-grid img:nth-child(12) { transform: rotate(1.5deg) translate(6px, -2px); z-index: 1; }
+.masonry-grid img:nth-child(13) { transform: rotate(-3.5deg) translate(-3px, 5px); z-index: 2; }
+.masonry-grid img:nth-child(14) { transform: rotate(2deg) translate(4px, -4px); z-index: 1; }
+.masonry-grid img:nth-child(15) { transform: rotate(-1deg) translate(-5px, 3px); z-index: 3; }
+.masonry-grid img:nth-child(16) { transform: rotate(4deg) translate(2px, -5px); z-index: 2; }
+.masonry-grid img:nth-child(17) { transform: rotate(-2deg) translate(-4px, 2px); z-index: 1; }
+.masonry-grid img:nth-child(18) { transform: rotate(1.5deg) translate(5px, -3px); z-index: 2; }
+.masonry-grid img:nth-child(19) { transform: rotate(-3deg) translate(-2px, 4px); z-index: 3; }
+.masonry-grid img:nth-child(20) { transform: rotate(2.5deg) translate(3px, -5px); z-index: 1; }
+.masonry-grid img:nth-child(21) { transform: rotate(-1.5deg) translate(-6px, 2px); z-index: 2; }
+.masonry-grid img:nth-child(22) { transform: rotate(3deg) translate(4px, -3px); z-index: 1; }
+.masonry-grid img:nth-child(23) { transform: rotate(-2.5deg) translate(-3px, 5px); z-index: 3; }
+.masonry-grid img:nth-child(24) { transform: rotate(1deg) translate(5px, -4px); z-index: 2; }
 
 .masonry-grid img:hover {
-transform: scale(1.1) rotate(0deg) translate(0, 0);
-z-index: 10;
+  transform: scale(1.15) rotate(0deg) translate(0, 0);
+  z-index: 10;
 }
 
-
 .costume-design-cover {
-  width: 390px !important; /* or 200px if you want it even bigger */
+  width: 280px !important;
   z-index: 5;
-  transform: rotate(-2deg) translate(5px, -5px);
+  transform: rotate(-2deg) translate(3px, -3px);
 }
 
 
