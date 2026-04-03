@@ -243,11 +243,6 @@ html, body {
   font-weight:700;
 }
 
-.section h3{
-  font-size: var(--h3);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
 
 .section p, .section li{
   font-size: var(--body);
