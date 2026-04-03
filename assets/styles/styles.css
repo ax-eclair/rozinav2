@@ -47,20 +47,15 @@ html, body {
 }
 
 .navbar {
-  background-color: #ffffff; /* example grey, change as needed */
-  padding: 8px 10px;
-  font-weight: bold;
+  background-color: #ffffff;
+  padding: 16px 24px;
+  font-weight: 600;
   font-family: var(--main-font);
-   position: sticky;    /* stays in normal flow, then sticks */
+  position: sticky;
   top: 0;
-  z-index: 1000; 
-
-
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
-
-
-
-
 
 
 .navbar-menu {
@@ -84,6 +79,29 @@ html, body {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.25s ease;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.navbar-menu a:hover {
+  color: #333;
 }
 
 
@@ -343,57 +361,67 @@ html, body {
 
 /* footer */
 .footer {
-  font-family: sans-serif;
-  padding-top: 10px;
+  font-family: var(--main-font);
+  padding-top: 40px;
+  margin-top: 20px;
 }
 
 .footer-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  padding-bottom: 20px;
+  gap: 20px 40px;
+  padding: 0 24px 32px;
   text-align: left;
-  padding-right : 10px;
-  padding-left : 10px;
 }
 
 .footer-section {
-  flex: 1 1 300px; /* grow, shrink, and base width */
-  max-width: 400px;
+  flex: 1 1 200px;
+  max-width: 300px;
 }
 
-.footer-section h4 {
-  margin-bottom: 8px;
-  font-size: 1rem;
-  text-transform: uppercase;
+.footer-section p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #000000;
+  line-height: 1.6;
 }
 
-.footer-section p,
+.footer-section strong {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .footer-section a {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #000000;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .footer-section a:hover {
-  color: #444444;
+  color: #555555;
 }
 
 .footer-bottom {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   background-color: #ffffff;
-  color: #575757;
+  color: #777;
   width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 12px 24px;
+  letter-spacing: 0.02em;
 }
 
 .email-axel a {
-  color: #000000;
+  color: #777;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.email-axel a:hover {
+  color: #333;
 }
 
 
