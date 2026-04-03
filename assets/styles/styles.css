@@ -235,67 +235,100 @@ html, body {
 }
 
 
-.content-stack{
-  display:flex;
-  flex-direction:column;
-  padding: 10px;
+.content-stack {
+  display: flex;
+  flex-direction: column;
+}
 
+.two-col {
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #about {
   scroll-margin-top: 60px;
 }
 
-.section h1.name{
-  line-height:1.1;
-  margin-top : 0px;
-  margin-bottom:5px;
-  font-weight:700;
+.section .name {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
-.section h2{
-  line-height:1.2;
-  margin:0 0 10px;
-  font-weight:700;
+.section h2 {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin: 28px 0 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555;
 }
 
-
-.section p, .section li{
-  font-size: var(--body);
-  line-height:1.65;
-  margin:0;
+.section p, .section li {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0;
+  color: #2a2a2a;
 }
-
 
 /* Behance line */
-.behance a{
+.behance {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.behance a {
   color: inherit;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.behance a:hover {
+  color: #555;
 }
 
 /* Education list */
-.edu-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:10px;
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
 }
-.edu-list li strong{ font-weight:600; }
 
+.edu-list li {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
 
+.edu-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
 
+.edu-list li strong {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
 
 /* Two-column for larger screens */
 @media (min-width: 900px) {
   .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 150px;
+    gap: 80px;
     align-items: start;
   }
-  .education .edu-wrapper{
+
+  .education .edu-wrapper {
     text-align: right;
   }
 
@@ -304,7 +337,7 @@ html, body {
   }
 
   .education .edu-list {
-    justify-items: end; /* for grid items inside ul */
+    justify-items: end;
   }
 }
 
@@ -366,60 +399,80 @@ html, body {
 /* footer */
 .footer {
   font-family: var(--main-font);
-  padding-top: 40px;
+  text-align: center;
+  padding: 28px 0 0;
   margin-top: 20px;
 }
 
-.footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px 40px;
-  padding: 0 24px 32px;
-  text-align: left;
-}
-
-.footer-section {
-  flex: 1 1 200px;
-  max-width: 300px;
-}
-
-.footer-section p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: #000000;
-  line-height: 1.6;
-}
-
-.footer-section strong {
+.footer-cta {
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 14px;
 }
 
-.footer-section a {
-  margin: 0;
+.footer-contact,
+.footer-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-contact {
+  margin-right: 20px;
+}
+
+.footer-links {
+  margin-bottom: 0;
+}
+
+.footer-contact a,
+.footer-links a {
   font-size: 0.88rem;
-  color: #000000;
+  color: #000;
   text-decoration: none;
+  position: relative;
   transition: color 0.2s ease;
 }
 
-.footer-section a:hover {
-  color: #555555;
+.footer-contact a::after,
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.25s ease;
+}
+
+.footer-contact a:hover::after,
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-contact a:hover,
+.footer-links a:hover {
+  color: #333;
 }
 
 .footer-bottom {
-  text-align: center;
-  font-size: 0.75rem;
-  background-color: #ffffff;
-  color: #777;
-  width: 100%;
-  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 0.72rem;
+  color: #999;
+  padding: 16px 24px;
+  margin-top: 20px;
   letter-spacing: 0.02em;
+  border-top: 1px solid #d5d5d5;
 }
 
 .email-axel a {
-  color: #777;
+  color: #999;
   text-decoration: none;
   transition: color 0.2s ease;
 }
