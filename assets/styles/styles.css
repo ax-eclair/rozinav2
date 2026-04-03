@@ -624,27 +624,29 @@ html, body {
   }
 }
 
+.award-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
 .award-container {
-  display: grid;
-  grid-template-columns: repeat(5, auto); /* use auto instead of 1fr */
-  gap: 50px; /* optional spacing between items */
-  justify-content: center; /* centers the whole grid */
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 30px auto;
-  width: fit-content; /* makes container only as wide as its content */
+  gap: 24px;
+  margin-top: 12px;
 }
 
 .award-img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1; /* ensures square shape */
+  height: 50px;
+  width: auto;
   object-fit: contain;
 }
 
 @media (min-width: 768px) {
   .award-img {
-    height: 90px;
-    width: auto;
+    height: 60px;
   }
 }
 
