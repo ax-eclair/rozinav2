@@ -152,32 +152,58 @@ html, body {
 }
 
 
-/* The label itself */
+/* Project label overlay */
 .image-label {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: white;
-  color: black;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 20px 0;
-  font-size: 16px;
-  font-family: var(--main-font);
-
-  opacity: 0;
-  transition: opacity 0.1s ease;
-}
-/* Show label only on hover */
-.image-grid a:hover .image-label {
-  opacity: 1;
-}
-
-
-
-/* Ensure label is above the veil */
-.image-label {
+  padding: 16px;
+  box-sizing: border-box;
+  background: none;
+  color: #d4a053;
+  font-family: 'MonumentExtended', var(--main-font);
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  mix-blend-mode: difference;
   z-index: 2;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+/* Mobile: always visible, bottom-positioned */
+@media (max-width: 759px) {
+  .image-label {
+    top: auto;
+    bottom: 0;
+    align-items: flex-end;
+    padding: 16px;
+    font-size: 1.4rem;
+    opacity: 1;
+    transform: none;
+    mix-blend-mode: normal;
+    color: #fff;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  }
+}
+
+/* Desktop: show on hover */
+@media (min-width: 760px) {
+  .image-grid a:hover .image-label {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 
@@ -211,7 +237,7 @@ html, body {
   }
 
 
-  /* White veil overlay ONLY on desktop */
+  /* Warm tinted overlay on hover */
   .image-grid a::before {
     content: '';
     position: absolute;
@@ -219,14 +245,14 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.35s ease;
     z-index: 1;
   }
 
   .image-grid a:hover::before {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -282,13 +308,28 @@ html, body {
 
 .behance a {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  position: relative;
   transition: color 0.2s ease;
 }
 
+.behance a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.25s ease;
+}
+
+.behance a:hover::after {
+  width: 100%;
+}
+
 .behance a:hover {
-  color: #555;
+  color: #333;
 }
 
 /* Education list */
@@ -500,9 +541,32 @@ html, body {
   height: auto;
 }
 
-.description-container_cukovy, .description-container_babyark, .description-container_nivea, .description-container_red, .description-container_johnnie_walker, .description-container_algoflex, .description-container_upcycled, .description-container_costume_design {
-  padding-left: 10px;
-  padding-right: 10px;
+.description-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 760px) {
+  .description-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+}
+
+.desc-left p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #2a2a2a;
+}
+
+.desc-right {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #2a2a2a;
 }
 
 .photo-container img.medium-zoomed-image {
