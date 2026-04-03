@@ -315,6 +315,13 @@ html, body {
   font-size: 0.95rem;
 }
 
+/* Stack spacing on mobile */
+@media (max-width: 899px) {
+  .section.education {
+    margin-top: 32px;
+  }
+}
+
 /* Two-column for larger screens */
 @media (min-width: 900px) {
   .two-col {
